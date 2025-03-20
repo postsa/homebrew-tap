@@ -5,21 +5,21 @@
 class Strut < Formula
   desc "Gemini CLI"
   homepage "https://github.com/postsa/strut/"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/postsa/strut/releases/download/v0.0.3/strut_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f5681afa9a1f85ed1d10e460db0b147067ce6c32aec93040368270f150783883"
+      url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "697011fbf8f64e7e7cf6bf01a60418d78e30d8c0aa8c9ffcf0ee6b2738f54abf"
 
       def install
         bin.install "strut"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/postsa/strut/releases/download/v0.0.3/strut_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "696b57369e04e75188f6a91e3b411929dd2245ac93548e52dd87c6034ab91e82"
+      url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "01c10c118f9d3ac603d297176b85e9d3cea480b11184381c7617d9a9fad74e78"
 
       def install
         bin.install "strut"
@@ -30,8 +30,8 @@ class Strut < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/postsa/strut/releases/download/v0.0.3/strut_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-        sha256 "d8aa7471c12659253de6c6cd8533f7467fcb8243f4938d401b377741b52a5d26"
+        url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+        sha256 "fb3c38d59c90af2148a2edf294dc047c9f9baa5350088fd3039930a4bbd935dd"
 
         def install
           bin.install "strut"
@@ -40,8 +40,8 @@ class Strut < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/postsa/strut/releases/download/v0.0.3/strut_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "f8890c73e722f254e0e3d73bc90d845c00761e2ae77c543b6cc04460c36f12af"
+        url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "8a86cff959c5181d499d30e45039ec4b0436b00c283361a85885b5dfd22777e7"
 
         def install
           bin.install "strut"
