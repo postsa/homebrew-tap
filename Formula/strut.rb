@@ -5,48 +5,24 @@
 class Strut < Formula
   desc "Gemini CLI"
   homepage "https://github.com/postsa/strut/"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
+  depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "697011fbf8f64e7e7cf6bf01a60418d78e30d8c0aa8c9ffcf0ee6b2738f54abf"
+  if Hardware::CPU.intel?
+    url "https://github.com/postsa/strut/releases/download/v0.0.5/strut_Darwin_x86_64.tar.gz"
+    sha256 "d9d5ed32f391adee43cf4bda9417342d2cb83d8b576a89a7982ca8613f9e347d"
 
-      def install
-        bin.install "strut"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "01c10c118f9d3ac603d297176b85e9d3cea480b11184381c7617d9a9fad74e78"
-
-      def install
-        bin.install "strut"
-      end
+    def install
+      bin.install "strut"
     end
   end
+  if Hardware::CPU.arm?
+    url "https://github.com/postsa/strut/releases/download/v0.0.5/strut_Darwin_arm64.tar.gz"
+    sha256 "f81fc971f89ebcdc21c7ccd357af2c6f7203403c9f64fb79aeeaf5044c66ec00"
 
-  on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-        sha256 "fb3c38d59c90af2148a2edf294dc047c9f9baa5350088fd3039930a4bbd935dd"
-
-        def install
-          bin.install "strut"
-        end
-      end
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/postsa/strut/releases/download/v0.0.4/strut_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "8a86cff959c5181d499d30e45039ec4b0436b00c283361a85885b5dfd22777e7"
-
-        def install
-          bin.install "strut"
-        end
-      end
+    def install
+      bin.install "strut"
     end
   end
 end
