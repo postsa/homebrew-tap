@@ -5,21 +5,21 @@
 class Strut < Formula
   desc "Gemini CLI"
   homepage "https://github.com/postsa/strut/"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/postsa/strut/releases/download/v0.0.6/strut_Darwin_x86_64.tar.gz"
-    sha256 "2bf970a45f8ce407fae6b09e4a7aa7009b2c5c54b315be209f5a8dbc646990ad"
+    url "https://github.com/postsa/strut/releases/download/v0.0.7/strut_Darwin_x86_64.tar.gz"
+    sha256 "b63bf63a499934fbec89ceffde36e3142733d280edc3cb7cb9bd42f25e20f74a"
 
     def install
       bin.install "strut"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/postsa/strut/releases/download/v0.0.6/strut_Darwin_arm64.tar.gz"
-    sha256 "269542da2c08af63637a5abb32c9126565bfd9edadc59658945fdb5d1a17d5ba"
+    url "https://github.com/postsa/strut/releases/download/v0.0.7/strut_Darwin_arm64.tar.gz"
+    sha256 "aab07e311597faf206d64e3fb34c6dc5b26180864a766ebcaec7778fa448951f"
 
     def install
       bin.install "strut"
